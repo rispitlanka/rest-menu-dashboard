@@ -202,7 +202,6 @@ export default function MenuItemManagementPanel({ mode = "all" }: { mode?: Panel
   const handleCreateItem = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!createForm.categoryId || !createForm.name.trim() || !createForm.price.trim()) {
-      setErrorMessage("Category, name, and price are required.");
       showToast("Category, name, and price are required.", "error");
       return;
     }
